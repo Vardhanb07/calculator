@@ -1,0 +1,37 @@
+body {
+    margin : 0px;
+    padding : 0px;
+    display: flex;
+    flex-direction: column;
+    background-color: #3b3b3b;
+    color: white;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    width : 600px;
+    height : 600px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 10px 10px black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.container > div {
+    background-color: #3b3b3b;
+    margin : 10px;
+    border-radius: 8px;
+}
+.display {
+    flex-grow : 1;
+    flex-basis : 100px;
+    width : 570px;
+}
+.buttons {
+    flex-grow : 7;
+    flex-basis : 100px;
+    width : 570px;
+}
