@@ -31,14 +31,15 @@ function operate(number1, number2, operater){
             console.log('Unknown operation');
     }
 }
-const buttons = document.querySelector('.buttons');
-for(let i = 0; i < 5; i++){
-    let head = document.createElement('div');
-    head.classList.add('head');
-    for(let j = 0; j < 4; j++){
-        let element = document.createElement('div');
-        element.classList.add('element');
-        head.appendChild(element);
-    }
-    buttons.appendChild(head);
-}
+// const buttons = document.querySelector('.buttons');
+// for(let i = 0; i < 5; i++){
+//     let head = document.createElement('div');
+//     head.classList.add('head');
+//     for(let j = 0; j < 4; j++){
+//         let element = document.createElement('button');
+//         element.classList.add('element');
+//         element.textContent = `${i + j}`;
+//         head.appendChild(element);
+//     }
+//     buttons.appendChild(head);
+// }
