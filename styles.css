@@ -10,8 +10,8 @@ body {
     align-items: center;
 }
 .container {
-    width : 600px;
-    height : 600px;
+    width : 500px;
+    height : 500px;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 10px 10px black;
@@ -28,10 +28,41 @@ body {
 .display {
     flex-grow : 1;
     flex-basis : 100px;
-    width : 570px;
+    width : 470px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.display > span {
+    font-size: 44px;
+    margin-right : 10px;
 }
 .buttons {
     flex-grow : 7;
     flex-basis : 100px;
-    width : 570px;
+    width : 470px;
+    display : flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.buttons > .head {
+    width: 440px;
+    height: 40px;
+    display : flex;
+    flex-direction: row;
+    background-color: #3b3b3b;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 8px;
+    padding: 4px;
+    gap : 10px
+}
+.head > .element {
+    flex : 1 0 0;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    border-width: 0px;
+    cursor : pointer;
 }
