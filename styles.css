@@ -65,4 +65,17 @@ body {
     border-radius: 8px;
     border-width: 0px;
     cursor : pointer;
+    font-size: 16px;
+    font-family: 'Liter';
+    font-weight: 580;
+}
+.element:hover{
+    box-shadow: 4px 4px 4px black;
+}
+.element:active{
+    color : #fff;
+    background-color: black;
+}
+.element.equal {
+    flex : 2.2 0 0;
 }
