@@ -14,32 +14,49 @@ function divideNumbers(number1, number2){
     return 'Cannot divide by zero';
 }
 function operate(number1, number2, operater){
+    let result;
     switch(operater) {
-        case '+' :
-            addNumbers(number1, number2);
+        case '+':
+            result = addNumbers(number1, number2);
             break;
-        case '-' :
-            subNumbers(number1, number2);
+        case '-':
+            result = subNumbers(number1, number2);
             break;
-        case '/' :
-            divideNumbers(number1, number2);
+        case '/':
+            result = divideNumbers(number1, number2);
             break;
-        case '*' :
-            multiplyNumbers(number1, number2);
+        case '*':
+            result = multiplyNumbers(number1, number2);
             break;
         default:
             console.log('Unknown operation');
     }
+    return result;
 }
-// const buttons = document.querySelector('.buttons');
-// for(let i = 0; i < 5; i++){
-//     let head = document.createElement('div');
-//     head.classList.add('head');
-//     for(let j = 0; j < 4; j++){
-//         let element = document.createElement('button');
-//         element.classList.add('element');
-//         element.textContent = `${i + j}`;
-//         head.appendChild(element);
-//     }
-//     buttons.appendChild(head);
-// }
+let input1 ;
+let input2 = 10;
+let output;
+const result = document.querySelector('.result');
+result.textContent = '0';
+const elements = document.querySelectorAll('.element.number');
+elements.forEach((element) => {
+    element.addEventListener('click', () => {
+        let number = element.textContent;
+        input1 = Number(number);
+        result.textContent = `${number}`;
+    })
+})
+const clear = document.querySelector('.element.clear');
+clear.addEventListener('click', () => {
+    result.textContent = '0';
+    input1 = 0;
+    input2 = 0;
+    output = 0;
+})
+const operators = document.querySelectorAll('.element.operator');
+operators.forEach((operator) => {
+    operator.addEventListener('click', () => {
+        output = operate(input1, input2, operator.textContent);
+        result.textContent = `${output}`;
+    })
+})
