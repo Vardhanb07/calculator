@@ -32,6 +32,7 @@ body {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    font-family: "Liter";
 }
 .display > span {
     font-size: 44px;
@@ -78,4 +79,7 @@ body {
 }
 .element.equal {
     flex : 2.2 0 0;
+}
+.element.divide {
+    flex : 0.62 0 0;
 }
