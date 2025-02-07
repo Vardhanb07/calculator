@@ -34,7 +34,7 @@ function operate(number1, number2, operater){
     return result;
 }
 let input1 = 0;
-let input2 = 10;
+let input2 = 0;
 let output;
 const result = document.querySelector('.result');
 result.textContent = '0';
@@ -58,23 +58,20 @@ clear.addEventListener('click', () => {
     output = 0;
     number = '';
 })
+let operation = '';
 const operators = document.querySelectorAll('.element.operator');
 operators.forEach((operator) => {
     operator.addEventListener('click', () => {
-        elements.forEach((element) => {
-            element.addEventListener('click', () => {
-                result.textContent = '0';
-                number = String(number);
-                number += element.textContent;
-                result.textContent = number;
-                number = Number(number);
-                input2 = number;
-                console.log(input2);
-            })
-        })
         output = operate(input1, input2, operator.textContent);
-        result.textContent = `${output}`;
-        input1 = output;
-        input2 = 0;
+        operation = operator.textContent;
+        console.log(output);
+        number = '';
+        input2 = output;
+        input1 = 0;
     })
+})
+const equal = document.querySelector('.element.equal');
+equal.addEventListener('click', () => {
+    output = operate(input1, input2, operation);
+    result.textContent = output;
 })
