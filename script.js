@@ -73,5 +73,7 @@ operators.forEach((operator) => {
 const equal = document.querySelector('.element.equal');
 equal.addEventListener('click', () => {
     output = operate(input2, input1, operation);
+    input1 = output;
+    input2 = 0;
     result.textContent = output;
 })
