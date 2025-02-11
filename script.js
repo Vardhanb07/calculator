@@ -62,18 +62,19 @@ let operation = '';
 const operators = document.querySelectorAll('.element.operator');
 operators.forEach((operator) => {
     operator.addEventListener('click', () => {
+        operator.textContent == '+' || operator.textContent == '-' ? input2 = 0 : input2 = 1;
         output = operate(input1, input2, operator.textContent);
         operation = operator.textContent;
         console.log(output);
         number = '';
         input2 = output;
-        input1 = 0;
+        operator.textContent == '+' || operator.textContent == '-' ? input1 = 0 : input1 = 1;
     })
 })
 const equal = document.querySelector('.element.equal');
 equal.addEventListener('click', () => {
     output = operate(input2, input1, operation);
     input1 = output;
-    input2 = 0;
+    operation == '+' || operation == '-' ? input2 = 0 : input2 = 1;
     result.textContent = output;
 })
