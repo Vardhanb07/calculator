@@ -78,3 +78,12 @@ equal.addEventListener('click', () => {
     operation == '+' || operation == '-' ? input2 = 0 : input2 = 1;
     result.textContent = output;
 })
+const backspace = document.querySelector('.backspace');
+backspace.addEventListener('click', () => {
+    number = String(number);
+    number = number.slice(0, number.length - 1);
+    number = Number(number);
+    result.textContent  = number;
+    input1 = number;
+    console.log(number);
+})
