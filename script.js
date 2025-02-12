@@ -87,3 +87,10 @@ backspace.addEventListener('click', () => {
     input1 = number;
     console.log(number);
 })
+const point = document.querySelector('.element.point');
+point.addEventListener('click', () => {
+    number = String(number);
+    number += '.';
+    result.textContent = number;
+    console.log(number);
+})
