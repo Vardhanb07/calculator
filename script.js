@@ -47,7 +47,7 @@ elements.forEach((element) => {
         result.textContent = number;
         number = Number(number);
         input1 = number;
-        console.log(input1);
+        // console.log(input1);
     })
 })
 const clear = document.querySelector('.element.clear');
@@ -65,7 +65,7 @@ operators.forEach((operator) => {
         operator.textContent == '+' || operator.textContent == '-' ? input2 = 0 : input2 = 1;
         output = operate(input1, input2, operator.textContent);
         operation = operator.textContent;
-        console.log(output);
+        // console.log(output);
         number = '';
         input2 = output;
         operator.textContent == '+' || operator.textContent == '-' ? input1 = 0 : input1 = 1;
@@ -85,12 +85,12 @@ backspace.addEventListener('click', () => {
     number = Number(number);
     result.textContent  = number;
     input1 = number;
-    console.log(number);
+    // console.log(number);
 })
 const point = document.querySelector('.element.point');
 point.addEventListener('click', () => {
     number = String(number);
     number += '.';
     result.textContent = number;
-    console.log(number);
+    // console.log(number);
 })
